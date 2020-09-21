@@ -68,7 +68,10 @@ export default class dashboard extends Component {
       isOpen: false,
       selectedItem: item,
     });
-
+    componentDidMount() {
+      console.disableYellowBox = true;
+       
+     }
   render() {
     const menu = <Menu onItemSelected={this.onMenuItemSelected} />;
 

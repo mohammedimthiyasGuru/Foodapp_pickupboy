@@ -46,7 +46,7 @@ componentDidMount(){
                      <View style={styles.borderline}/>
                      <View style={styles.subviewdummyview}></View>
                      <View style={styles.buttonstylelarge}>
-                         <Text style={styles.textsizetofit,styles.textcenter} onPress={this.props.navigation.navigate('dashboard')}>submit</Text>
+                         <Text style={styles.textsizetofit,styles.textcenter} onPress={()=>this.props.navigation.navigate('dashboard')}>submit</Text>
                      </View>
                      <View style={styles.subviewdummyview}></View>
                      <View style={styles.lengthbuttonstyle}>

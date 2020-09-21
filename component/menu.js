@@ -14,7 +14,7 @@ const uri = 'https://pickaface.net/gallery/avatar/Opi51c74d0125fd4.png';
 
 const styles = StyleSheet.create({
   menu: {
-    flex: 1,
+    flex: 1,    
     width: window.width,
     height: window.height,
     backgroundColor: 'gray',
@@ -34,11 +34,13 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 70,
     top: 20,
+    color:'white'
   },
   item: {
     fontSize: 14,
     fontWeight: '300',
     paddingTop: 5,
+    color:'white'
   },
 });
 
