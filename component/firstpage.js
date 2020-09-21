@@ -9,6 +9,8 @@ import AsyncStorage from '@react-native-community/async-storage';
 import smapleimg from '../assets/sample.jpeg'
 import { TextInput } from 'react-native-gesture-handler';
 import styles from '../Style/styles'
+import dashboard from '../component/dashboard'
+
 export class firstpage extends Component {
   interval = setTimeout(() => {
     if (this.state.loginstatus != "true") {
@@ -44,7 +46,7 @@ componentDidMount(){
                      <View style={styles.borderline}/>
                      <View style={styles.subviewdummyview}></View>
                      <View style={styles.buttonstylelarge}>
-                         <Text style={styles.textsizetofit,styles.textcenter}>submit</Text>
+                         <Text style={styles.textsizetofit,styles.textcenter} onPress={this.props.navigation.navigate('dashboard')}>submit</Text>
                      </View>
                      <View style={styles.subviewdummyview}></View>
                      <View style={styles.lengthbuttonstyle}>
@@ -71,7 +73,8 @@ componentDidMount(){
 
 const RootStack = createStackNavigator(
   {
-    firstpage: firstpage
+    firstpage: firstpage,
+    dashboard: dashboard,
   }
   ,{
     defaultNavigationOptions: {
