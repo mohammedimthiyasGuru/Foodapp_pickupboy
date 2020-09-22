@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   Dimensions,
@@ -98,10 +98,10 @@ export default function Menu({ onItemSelected }) {
       </Text>
       <Text/>
       <Text
-        onPress={() => onItemSelected('Contacts')}
+        onPress={() => onItemSelected('Notifications')}
         style={styles.item}
       >
-        Contacts
+        Notifications
       </Text>
       <Text/>
       <Text

@@ -10,7 +10,7 @@ import smapleimg from '../assets/sample.jpeg'
 import { TextInput } from 'react-native-gesture-handler';
 import styles from '../Style/styles'
 import dashboard from '../component/dashboard'
-
+import notification from '../component/notification'
 export class firstpage extends Component {
   interval = setTimeout(() => {
     if (this.state.loginstatus != "true") {
@@ -75,6 +75,7 @@ const RootStack = createStackNavigator(
   {
     firstpage: firstpage,
     dashboard: dashboard,
+    notification: notification
   }
   ,{
     defaultNavigationOptions: {

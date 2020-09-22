@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import SideMenu from 'react-native-side-menu';
 import Menu from '../component/menu';
-
+import notification from '../component/notification'
 const image = require('../assets/sample.jpeg');
 
 const styles = StyleSheet.create({
@@ -63,14 +63,20 @@ export default class dashboard extends Component {
     this.setState({ isOpen });
   }
 
-  onMenuItemSelected = item =>
+  onMenuItemSelected = item => this.callmenu(item)
+
+  callmenu(data){
     this.setState({
       isOpen: false,
-      selectedItem: item,
+      selectedItem: data,
     });
+    console.log(data)
+    if (data == "Notifications"){
+      this.props.navigation.navigate('notification')
+    }
+  }
     componentDidMount() {
       console.disableYellowBox = true;
-       
      }
   render() {
     const menu = <Menu onItemSelected={this.onMenuItemSelected} />;
