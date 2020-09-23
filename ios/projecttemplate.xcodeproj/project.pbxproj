@@ -161,7 +161,6 @@
 				C6FFE00CC091F241E2B8966E /* Pods-projecttemplate-tvOSTests.debug.xcconfig */,
 				A3E73849CB4C6EF5D31E89A4 /* Pods-projecttemplate-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -664,7 +663,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.Foodapppickupboy;
 				PRODUCT_NAME = projecttemplate;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -686,7 +685,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.Foodapppickupboy;
 				PRODUCT_NAME = projecttemplate;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
