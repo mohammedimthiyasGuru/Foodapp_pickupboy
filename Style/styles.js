@@ -6,6 +6,9 @@ import {
 } from 'react-native';
 const Styles = StyleSheet.create({
     // view
+    appcolor:{
+      backgroundColor:'#F4AF42'
+    },
     justifycenter:{
     justifyContent:'center'
     },

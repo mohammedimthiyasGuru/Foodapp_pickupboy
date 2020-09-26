@@ -7,10 +7,13 @@ import { createAppContainer } from 'react-navigation'; // Version can be specifi
 import { createStackNavigator } from 'react-navigation-stack';
 import AsyncStorage from '@react-native-community/async-storage';
 import smapleimg from '../assets/sample.jpeg'
-import { TextInput } from 'react-native-gesture-handler';
+import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 import styles from '../Style/styles'
 import dashboard from '../component/dashboard'
 import notification from '../component/notification'
+import welcomepage from '../component/welcomepage'
+import seconddemo from '../component/seconddemo'
+import thirdpage from '../component/thirdpage'
 export class firstpage extends Component {
   interval = setTimeout(() => {
     if (this.state.loginstatus != "true") {
@@ -37,33 +40,23 @@ componentDidMount(){
     return (
       <SafeAreaView>
         {/* center Logo deisgn  */}
-            <View style={styles.mainview}>
-                 <View style={styles.submenu}>
-                     <Text style={styles.textlabelsize}>Text 1</Text>
-                     <TextInput style={styles.textinputsize}/>
-                     <Text style={styles.textlabelsize}>Text 2</Text>
-                     <TextInput style={styles.textinputsize}/>
-                     <View style={styles.borderline}/>
-                     <View style={styles.subviewdummyview}></View>
-                     <View style={styles.buttonstylelarge}>
-                         <Text style={styles.textsizetofit,styles.textcenter} onPress={()=>this.props.navigation.navigate('dashboard')}>submit</Text>
-                     </View>
-                     <View style={styles.subviewdummyview}></View>
-                     <View style={styles.lengthbuttonstyle}>
-                         <Text style={styles.textsizetofit, styles.textAlignright}>Forgot Password ?</Text>
-                     </View>
-                     <TextInput/>
-                     </View>
-                     <View style={styles.mainviewdummyview}></View>
-                     <View style={styles.buttonstylesmall}>
-                         <Text style={styles.textsizetofit, styles.textcenter}>Signup</Text>
-                     </View>
-                     <View style={styles.mainviewdummyview}></View>
-                     <View style={styles.socialbuttonstyle}>
-                         <Text style={styles.socialtextfit}>Google</Text>
-                         <Text style={styles.socialtextfit}>Facebook</Text>
-                     </View>
-                     <View style={styles.mainviewdummyview}></View>
+            <View style={{width:"100%",height:"100%"},styles.appcolor}>
+             <View style={{width:"100%",height:"80%"}}></View>
+             <View style={{width:"100%",height:"20%",justifyContent:'center'}}>
+                <View style={{width:"100%",height:"30%",backgroundColor:'clear'}}>
+                <View style={{flex:1,flexDirection:'row'}}>
+                <View style={{width:"60%",height:"100%"}}>
+
+                </View>
+                <View style={{width:"40%",height:"100%",backgroundColor:'white',borderTopLeftRadius:10,borderBottomLeftRadius:10,justifyContent:'center',alignItems:'center'}}>
+                    <TouchableOpacity style={{width:"100%",height:"100%",justifyContent:'center',alignItems:'center'}}onPress={()=> this.props.navigation.navigate('seconddemo')}>
+                    <Text style={{fontSize:14,fontWeight:'bold'}}>Next</Text>
+                    </TouchableOpacity>
+                </View>
+                </View>
+                
+                </View>
+             </View>
             </View>
         {/* center Logo deisgn  */}
         </SafeAreaView>
@@ -75,7 +68,10 @@ const RootStack = createStackNavigator(
   {
     firstpage: firstpage,
     dashboard: dashboard,
-    notification: notification
+    notification: notification,
+    welcomepage: welcomepage,
+    seconddemo: seconddemo,
+    thirdpage: thirdpage
   }
   ,{
     defaultNavigationOptions: {
@@ -92,5 +88,4 @@ export default class App extends React.Component {
     return <AppContainer />;
   }
 }
-
 
